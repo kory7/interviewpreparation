@@ -11,15 +11,30 @@
  *
  * {data: null, link: null}         is a valid Node.
  * {data: 5, link: node_b, node_c}  is a valid Node.
+ *
+ * Orphan Node: There isn't any Node pointing(link) to orphan Node.
  */
 
 //Default Node creation.
-class Node {
+export default class NodeAPI {
   constructor(data) {
     this.data = data;
     this.next = null;
   }
+  //Setter for nextNode
+  setNextNode(next) {
+    //Only accept Node instance or null in case that is the last node.
+    if (next instanceof NodeAPI || next === null) {
+      this.next = next;
+    } else {
+      throw new Error("Not instance of Node or null.");
+    }
+  }
+
+  getNextNode() {
+    return this.next;
+  }
 }
 
-const firstNode = new Node(5);
+const firstNode = new NodeAPI(5);
 console.log(firstNode);

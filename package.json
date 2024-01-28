@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "interviewpreparation",
+  "version": "1.0.0",
+  "description": "Coding study and notes for technical interview",
+  "main": "array_vs_object.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
